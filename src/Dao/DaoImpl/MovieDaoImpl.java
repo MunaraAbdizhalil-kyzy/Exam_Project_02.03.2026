@@ -31,20 +31,20 @@ public class MovieDaoImpl implements MovieDao{
                 for (int i = 0; i < getAllMovies().length; i++) {
                     if (database.getMovies()[i].getId()==id) {
                         database.getMovies()[i]=movie;
-                        if(movie.getName() != null && movie.getName().equals(movie.getName())){
-                            movie.setName(movie.getName());
+                        if(movie.getName() != null) {
+                            database.getMovies()[i].setName(movie.getName());
                         }
-                        if(movie.getDirector() != null && movie.getDirector().equals(movie.getDirector())){
-                            movie.setDirector(movie.getDirector());
+                        if(movie.getDirector() != null){
+                            database.getMovies()[i].setDirector(movie.getDirector());
                         }
-                        if(movie.getCountry() != null && movie.getCountry().equals(movie.getCountry())){
-                            movie.setCountry(movie.getCountry());
+                        if(movie.getCountry() != null){
+                            database.getMovies()[i].setCountry(movie.getCountry());
                         }
-                        if(movie.getReleaseDate() != null && movie.getReleaseDate().equals(movie.getReleaseDate())){
-                            movie.setReleaseDate(movie.getReleaseDate());
+                        if(movie.getReleaseDate() != null){
+                            database.getMovies()[i].setReleaseDate(movie.getReleaseDate());
                         }
-                        if(movie.getGenre() != null && movie.getGenre().equals(movie.getGenre())){
-                            movie.setGenre(movie.getGenre());
+                        if(movie.getGenre() != null){
+                            database.getMovies()[i].setGenre(movie.getGenre());
                         }
                         database.getMovies()[i]=movie;
                     }

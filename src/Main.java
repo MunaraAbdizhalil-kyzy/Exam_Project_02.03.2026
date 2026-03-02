@@ -33,7 +33,7 @@ void main() {
 
                 LocalDate releaseDate = null;
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-                if (releaseDate == null) {
+                while (releaseDate == null) {
                     try {
                         System.out.println("Enter the Release Date of Movie (YYYY,MM,DD): ");
                         String dateInput = scanner.next();
@@ -43,7 +43,7 @@ void main() {
                     }
                 }
                 Genre genre1 = null;
-                if (genre1 == null) {
+                while (genre1 == null) {
                     System.out.print("Enter the genre of the movie (UPPERCASE): ");
                     String genreInput = scanner.next();
                     try {
@@ -105,17 +105,17 @@ void main() {
 
                 LocalDate newReleaseDate = null;
                 DateTimeFormatter newFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-                if (newReleaseDate == null) {
+                while (newReleaseDate == null) {
                     try {
                         System.out.println("Enter the Release Date of Movie (YYYY,MM,DD): ");
                         String dateInput = scanner.next();
-                        releaseDate = LocalDate.parse(dateInput, newFormatter);
+                        newReleaseDate = LocalDate.parse(dateInput, newFormatter);
                     } catch (Exception e) {
                         System.out.println("Incorrect date format!");
                     }
 
                 Genre newGenre = null;
-                if (newGenre == null) {
+                while (newGenre == null) {
                     System.out.println("Enter the genre of the movie must be UPPERCASE: ");
                     String genreInput = scanner.next();
 
